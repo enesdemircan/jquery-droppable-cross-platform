@@ -1,0 +1,117 @@
+      <!doctype html>
+      <html lang="tr">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Enes Demircan</title>
+        <link rel="stylesheet" href="css/web.css">
+        <link rel="stylesheet" href="css/dikey-mobil.css">
+        <link rel="stylesheet" href="css/yatay-mobil.css">
+        <link rel="stylesheet" href="css/dikey-tablet.css">
+        <link rel="stylesheet" href="css/yatay-tablet.css">
+        <link href="https://fonts.googleapis.com/css?family=Bungee&amp;subset=latin-ext" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+      </head>
+      <body>
+
+      <!-- Ağaç ve Arkaplan Resmi -->
+      <div class="ust-arkaplan"></div>
+
+      <!-- Boş Beyaz Alanlar A-a ve E-e -->
+      <div class="gruplar">
+          <div id="grup1" class="alan">
+          <div class="yuvarlak">A-a</div>
+          </div>
+          <div id="grup2" class="alan">
+          <div class="yuvarlak">E-e</div>
+          </div>
+      </div>
+
+      <!-- Sürüklenecek Cisimler -->
+      <div class="alt-secim alt-arkaplan">
+
+          <img src="img/ayi.png" id="ayi" class="nesneler grup1" alt="">
+
+          <img src="img/arslan.png" id="arslan" class="nesneler grup1" alt="">
+
+          <img src="img/ari.png" id="ari" class="nesneler grup1" alt="">
+
+          <img src="img/elma.png" id="elma" class="nesneler grup2" alt="">
+
+          <img src="img/araba.png" id="araba" class="nesneler grup1" alt="">
+
+          <img src="img/esek.png" id="esek" class="nesneler grup2" alt="">
+
+          <img src="img/armut.png" id="armut" class="nesneler grup1" alt="">
+
+          <img src="img/ayakkabi.png" id="ayakkabi" class="nesneler grup1" alt="">
+
+          <img src="img/el.png" id="el" class="nesneler grup2" alt="">
+
+          <img src="img/elbise.png" id="elbise" class="nesneler grup2" alt="">
+
+          <img src="img/etek.png" id="etek" class="nesneler grup2" alt="">
+
+          <img src="img/ev.png" id="ev" class="nesneler grup2" alt="">
+
+      <div style="clear:both;"></div>
+
+      </div>
+
+      <!-- Popup Alanı-->
+      <div id="popup">
+      OYUNU TAMAMLADINIZ
+      </div>
+      <div id="saydam"></div>
+
+
+      <script>
+       $( function() {
+
+            var status = 0;
+            var deger = 0;
+            var nesnesayisi = 12;
+            //Sürüklenecek Nesneleri Belirtiyoruz
+            $( ".nesneler" ).draggable({ revert: 'invalid', revertDuration: 200  });
+
+            //A ile başlayan cisimlerin sürükleneceği alan
+            $( "#grup1" ).droppable({
+              accept      : ".grup1",
+              drop: function( event, ui ) {
+              //Sürükleme yapıldığında olur
+              }
+            });
+            //E ile başlayan cisimlerin sürükleneceği alan
+            $( "#grup2" ).droppable({
+              accept      : ".grup2",
+              drop: function( event, ui ) {
+              //Sürükleme yapıldığında olur
+              }
+            });
+
+
+          setInterval(function(){
+            var deger = 0;
+            var all = document.getElementsByClassName("nesneler");
+
+            for(i = 0; i < all.length; i++) {
+             if (all[i].style.top != "") {
+              deger = deger + 1;
+             }
+              //console.log(deger);
+            }
+            if (deger == nesnesayisi) {
+            console.log("biter");
+            document.getElementById('popup').style.display = "block";
+            document.getElementById('saydam').style.display = "block";
+            deger = 0;
+          }}, 2000);
+
+
+      });
+      </script>
+
+</body>
+</html>

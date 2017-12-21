@@ -1,0 +1,138 @@
+@media screen and (min-width: 1024px) {
+  html{
+    height: 100%;
+  }
+  body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #bcf6fd;
+    position: relative;
+    padding: 0;
+    margin: auto;
+  }
+  .ust-arkaplan{
+    background: url('../img/ust-arkaplan.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    z-index:  1;
+  }
+  .alt-arkaplan{
+    background: url('../img/alt-arkaplan.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 33%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .nesneler{
+    padding: 5px;
+    text-align: center;
+    color:black;
+    float: left;
+    width: 4%;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+
+  }
+  .nesneler img{
+    width: 100%;
+  }
+  .alan{
+    height: 159%;
+    border: 1px solid white;
+    border-radius: 10px;
+    float: left;
+    background-color: white;
+    border-radius: 30px;
+    text-align:  center;
+    width: 39%;
+    margin: 16px 5%;
+    position:  relative;
+  }
+  .gruplar{z-index: 2;position: absolute;height:  28%;width: 72%;top: 20%;margin: auto;left: 14%;}
+  .yuvarlak{
+    width: 22%;
+    height: 18%;
+    text-align: center;
+    border-radius: 70px;
+    position:  absolute;
+    top: -14%;
+    left: 38%;
+    padding-top: 24px;
+    background-color: #b6ce3f;
+    font-size: 29px;
+    color: white;
+    font-family: 'Bungee', cursive;
+  }
+  #el{
+    left:5%;
+  }
+  #araba{
+    left:12%;
+  }
+  #armut{
+    left:19%;
+  }
+  #arslan{
+    left:26%;
+  }
+  #ayakkabi{
+    left:33%;
+  }
+  #ari{
+    left:38%;
+  }
+  #ayi{
+    left:45%;
+  }
+  #elbise{
+    left: 53%;
+  }
+  #elma{
+    left: 60%;
+  }
+  #esek{
+    left:66%;
+  }
+  #etek{
+    left: 73%;
+  }
+  #ev{
+    left: 81%;
+  }
+  #popup{
+    width: 53%;
+    background-color: #b7ce3f;
+    /* height: 30%; */
+    color: white;
+    text-align: center;
+    z-index:  11;
+    position:  fixed;
+    left: 24%;
+    top: 30%;
+    font-size: 51px;
+    padding-top: 6%;
+    border-radius: 20px;
+    padding-bottom: 6%;
+    display: none;
+    font-family: 'Bungee', cursive;
+  }
+  #saydam{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+}
